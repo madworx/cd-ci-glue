@@ -40,7 +40,7 @@ is_travis_master_push() {
 dockerhub_push_image() {
     if [[ -v DOCKER_USERNAME ]] && [[ -v DOCKER_PASSWORD ]] ; then
         echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin && \
-            docker push $1
+            docker push "$1"
     else
         echo "FATAL: Docker hub username/password environment variables " 1>&2
         echo "       DOCKER_USERNAME and/or DOCKER_PASSWORD not set. Aborting." 1>&2
@@ -51,7 +51,7 @@ dockerhub_push_image() {
 
 #
 # Argument: $1 = repository name. e.g. madworx/docshell
-# Argument  $2 = file name containing description
+# Argument: $2 = file name containing description
 #
 dockerhub_set_description() {
     echo "Setting Docker hub description..."
@@ -71,7 +71,7 @@ dockerhub_set_description() {
     if [[ -v DOCKER_USERNAME ]] && [[ -v DOCKER_PASSWORD ]] ; then
         echo "Logging onto Docker hub..."
         TOKEN=$(curl -s -H "Content-Type: application/json" -X POST \
-                     -d '{"username": "'${DOCKER_USERNAME}'", "password": "'${DOCKER_PASSWORD}'"}' \
+                     -d '{"username": "'"${DOCKER_USERNAME}"'", "password": "'"${DOCKER_PASSWORD}"'"}' \
                      'https://hub.docker.com/v2/users/login/' | jq -r '.token')
 
         echo "Setting Docker hub description of image $1 ...."
@@ -92,11 +92,9 @@ dockerhub_set_description() {
 
 #
 # Argument: $1 = repository name. e.g. madworx/docshell.
+# Argument: $2 = branch name (optional)
 #
-# Outputs the temporary directory name you're supposed to put the Wiki
-# files into.
-#
-github_wiki_prepare() {
+_github_doc_prepare() {    
     if [[ ! -v GH_TOKEN ]] ; then
         echo "FATAL: Github token environment variable GH_TOKEN not set." 1>&2
         echo "       Aborting." 1>&2
@@ -115,10 +113,48 @@ github_wiki_prepare() {
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name  "Travis CI"
     git clone "https://${GH_TOKEN}@github.com/${1}.wiki.git" "${TMPDR}" >/dev/null 2>&1
+    if [ ! -z "$2" ] ; then
+        pushd "${TMPDR}" >/dev/null || exit 1
+        git checkout "$2"
+        popd >/dev/null
+    fi
+    echo "${TMPDR}"
+}
+
+#
+# Argument: $1 = repository name. e.g. madworx/docshell.
+#
+# Outputs the temporary directory name you're supposed to put the Wiki
+# files into.
+#
+github_wiki_prepare() {
+    TMPDIR=$(_github_doc_prepare "https://${GH_TOKEN}@github.com/${1}.wiki.git")
     pushd "${TMPDR}" >/dev/null || exit 1
     git rm -r . >/dev/null 2>&1 || true
     popd >/dev/null
     echo "${TMPDR}"
+}
+
+#
+# Argument: $1 = repository name. e.g. madworx/docshell.
+#
+# Outputs the temporary directory of the gh-pages branch.
+#
+github_pages_prepare() {
+    _github_doc_prepare "https://${GH_TOKEN}@github.com/${1}" "gh-pages"
+}
+
+#
+# Argument:   $1  =   temporary  directory   from  previous   call  to
+#                     github_doc_prepare.
+#
+# Commit previously prepared documentation
+#
+github_doc_commit() {
+    cd "$1" || exit 1
+    git add -A .
+    git commit -m 'Automated documentation update' -a || return 0
+    git push
 }
 
 #
@@ -128,8 +164,6 @@ github_wiki_prepare() {
 # Commit previously prepared wiki directory.
 #
 github_wiki_commit() {
-    cd "$1"
-    git add -A .
-    git commit -m 'Automated Wiki update' -a || return 0
-    git push
+    github_doc_commit "$1"
 }
+
