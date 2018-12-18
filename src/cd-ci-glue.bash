@@ -114,7 +114,7 @@ _github_doc_prepare() {
     TMPDR="$(mktemp -d)"
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name  "Travis CI"
-    git clone "https://${GH_TOKEN}@github.com/${1}.wiki.git" "${TMPDR}" >/dev/null 2>&1
+    git clone "$1" "${TMPDR}" >/dev/null 2>&1
     if [ ! -z "$2" ] ; then
         pushd "${TMPDR}" >/dev/null || exit 1
         git checkout "$2"
