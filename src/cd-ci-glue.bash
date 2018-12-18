@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 #
 # A small collection of helper  functions for interacting with Github,
 # Docker Hub, and Travis CI.
