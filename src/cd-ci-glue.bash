@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 #
 # A small collection of helper  functions for interacting with Github,
 # Docker Hub, and Travis CI.
@@ -114,7 +112,7 @@ _github_doc_prepare() {
     TMPDR="$(mktemp -d)"
     git config --global user.email "travis@travis-ci.org"
     git config --global user.name  "Travis CI"
-    git clone "$1" "${TMPDR}" >/dev/null 2>&1
+    git clone "$1" "${TMPDR}" >/dev/null 2>&1 || exit 1
     if [ ! -z "$2" ] ; then
         pushd "${TMPDR}" >/dev/null || exit 1
         git checkout "$2" >/dev/null 2>&1 || exit 1
