@@ -117,7 +117,7 @@ _github_doc_prepare() {
     git clone "$1" "${TMPDR}" >/dev/null 2>&1
     if [ ! -z "$2" ] ; then
         pushd "${TMPDR}" >/dev/null || exit 1
-        git checkout "$2"
+        git checkout "$2" >/dev/null 2>&1 || exit 1
         popd >/dev/null
     fi
     echo "${TMPDR}"
