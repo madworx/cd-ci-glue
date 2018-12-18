@@ -128,7 +128,7 @@ _github_doc_prepare() {
 # files into.
 #
 github_wiki_prepare() {
-    TMPDIR=$(_github_doc_prepare "https://${GH_TOKEN}@github.com/${1}.wiki.git")
+    TMPDIR=$(_github_doc_prepare "https://${GH_TOKEN}@github.com/${1}.wiki.git") || exit 1
     pushd "${TMPDR}" >/dev/null || exit 1
     git rm -r . >/dev/null 2>&1 || true
     popd >/dev/null
@@ -141,7 +141,7 @@ github_wiki_prepare() {
 # Outputs the temporary directory of the gh-pages branch.
 #
 github_pages_prepare() {
-    _github_doc_prepare "https://${GH_TOKEN}@github.com/${1}" "gh-pages"
+    _github_doc_prepare "https://${GH_TOKEN}@github.com/${1}" "gh-pages" || exit 1
 }
 
 #
