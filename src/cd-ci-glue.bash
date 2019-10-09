@@ -8,21 +8,53 @@
 ## @defgroup TravisCI Travis CI
 ## @defgroup GitHub GitHub.org
 ## @defgroup AWS Amazon Web Services
+## @defgroup Artifactory JFrog Artifactory
 ## @defgroup DockerHub Docker Hub
 
 
 # Private functions - do not invoke directly!
 
+_artifactory_ensure_cli() {
+    : "${_JFROG_INSTALL_URL:=https://getcli.jfrog.io}"
+    if ! type -p jfrog ; then
+        if ! type -p ./jfrog ; then
+            ## TODO: Test cases with incorrect download URL
+            ## TODO: Check if download/install worked.
+            ## TODO: Validate that we can run the binary.
+            curl -sfL "${_JFROG_INSTALL_URL}" | sh > /dev/null 2>&1 || exit 1
+            if [ -x ./jfrog ] ; then
+                echo "./jfrog"
+            else
+                echo "FATAL: Failed to download/produce jfrog CLI. Aborting." 1>&2
+                exit 1
+            fi
+        fi
+    fi
+}
+
+
+_artifactory_ensure_environment() {
+    if [[ -v ARTIFACTORY_URL ]] && [[ -v ARTIFACTORY_USER ]] && [[ -v ARTIFACTORY_PASSWORD ]] ; then
+        _artifactory_ensure_cli
+    else
+        echo "FATAL: Artifactory environment variables \$ARTIFACTORY_URL, \$ARTIFACTORY_USER" 1>&2
+        echo "or \$ARTIFACTORY_PASSWORD not set. Aborting." 1>&2
+        echo "" 1>&2
+        exit 1
+    fi
+}
+
+
 _aws_ensure_environment() {
     if [[ -v AWS_ACCESS_KEY_ID ]] && [[ -v AWS_SECRET_ACCESS_KEY ]] && [[ -v AWS_DEFAULT_REGION ]] ; then
         # validate tool(s) exist.
-        if ! type aws >/dev/null 2>&1 ; then
+        if ! type -p aws >/dev/null 2>&1 ; then
             echo "FATAL: 'aws' command not found. Please install 'awscli' package." 1>&2
             exit 1
         fi
         _docker_ensure_cli
     else
-        echo "FATAL: AWScli environment variables \$AWS_ACCESS_KEY_ID, \$AWS_SECRET_ACCESS_KEY" 1>&2
+        echo "FATAL: awscli environment variables \$AWS_ACCESS_KEY_ID, \$AWS_SECRET_ACCESS_KEY" 1>&2
         echo "or \$AWS_DEFAULT_REGION not set. Aborting." 1>&2
         echo "" 1>&2
         exit 1
@@ -31,7 +63,7 @@ _aws_ensure_environment() {
 
 
 _docker_ensure_cli() {
-    if ! type docker >/dev/null 2>&1 ; then
+    if ! type -p docker >/dev/null 2>&1 ; then
         echo "FATAL: 'docker' command not found. Please install docker engine/cli." 1>&2
         exit 1
     fi
@@ -76,11 +108,33 @@ _github_doc_prepare() {
     pushd "${TMPDR}" >/dev/null || exit 1
     git config --local user.email "support@travis-ci.org"
     git config --local user.name  "Travis CI"
-    if [ ! -z "$2" ] ; then
+    if [ -n "$2" ] ; then
         git checkout "$2" >/dev/null 2>&1 || exit 1
     fi
     popd >/dev/null || exit 1
     echo "${TMPDR}"
+}
+
+
+##
+## @fn artifactory_setup()
+##
+## @brief (Possibly download) and configure the `jfrog` CLI utility.
+##
+## @par Environment variables
+##  @b ARTIFACTORY_URL Specifies the URL to your JFrog Artifactory installation. @n
+##  @b ARTIFACTORY_NAME Specifies the username to connect using. @n
+##  @b ARTIFACTORY_PASSWORD Specifies the password/apikey to connect using. @n
+##
+## @par Example
+## `$ artifactory_setup` @n
+##
+## @ingroup Artifactory
+artifactory_setup() {
+    JFROG_CLI=$(_artifactory_ensure_environment) || exit 1
+    $JFROG_CLI rt config --interactive=false --url "${ARTIFACTORY_URL}" \
+        --user "${ARTIFACTORY_USER}" --apikey "${ARTIFACTORY_PASSWORD}" || exit 1
+    return
 }
 
 
@@ -303,8 +357,9 @@ github_doc_commit() {
 github_releases_get_latest() {
     JSON=$(curl -fs "https://${GH_TOKEN:+$GH_TOKEN@}api.github.com/repos/$1/tags") || exit 1
     LATEST_TAG="$(jq -r '.[0].name' <<<"${JSON}")" || exit 1
+    # shellcheck disable=SC2001
     LATEST_TAG="$(echo "${LATEST_TAG}" | sed 's#[^a-zA-Z0-9.,_+-]##g')"
-    echo $LATEST_TAG
+    echo "${LATEST_TAG}"
 }
 
 
