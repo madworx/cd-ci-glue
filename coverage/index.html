@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-09T09:17:34+00:00">2019-10-09T09:17:34+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-10-09T10:48:13+00:00">2019-10-09T10:48:13+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.21%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.4
+         8.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>132</b> relevant lines. 
+    <b>150</b> relevant lines. 
     <span class="green"><b>127</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="red"><b>23</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#a765f1c142591cc3fc40825276b3c7d65fb3c9d7" class="src_link" title="cd-ci-glue.bash">cd-ci-glue.bash</a></td>
-        <td class="green strong">96.21 %</td>
-        <td>447</td>
-        <td>132</td>
+        <td class="yellow strong">84.67 %</td>
+        <td>502</td>
+        <td>150</td>
         <td>127</td>
-        <td>5</td>
-        <td>9.4</td>
+        <td>23</td>
+        <td>8.2</td>
       </tr>
       
     </tbody>
@@ -79,11 +79,11 @@
         <div class="source_table" id="a765f1c142591cc3fc40825276b3c7d65fb3c9d7">
   <div class="header">
     <h3>cd-ci-glue.bash</h3>
-    <h4><span class="green">96.21 %</span> covered</h4>
+    <h4><span class="yellow">84.67 %</span> covered</h4>
     <div>
-      <b>132</b> relevant lines. 
+      <b>150</b> relevant lines. 
       <span class="green"><b>127</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="red"><b>23</b> lines missed.</span>
     </div>
   </div>
   
@@ -153,13 +153,13 @@
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">## @defgroup DockerHub Docker Hub</code>
+          <code class="ruby">## @defgroup Artifactory JFrog Artifactory</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">## @defgroup DockerHub Docker Hub</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -171,343 +171,343 @@
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby"># Private functions - do not invoke directly!</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
+          <code class="ruby"># Private functions - do not invoke directly!</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="16">
-          <span class="hits">16</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">_aws_ensure_environment() {</code>
+          
+          <code class="ruby">_artifactory_ensure_cli() {</code>
         </li>
       
-        <li class="covered" data-hits="86" data-linenumber="17">
-          <span class="hits">86</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
           
-          <code class="ruby">    if [[ -v AWS_ACCESS_KEY_ID ]] &amp;&amp; [[ -v AWS_SECRET_ACCESS_KEY ]] &amp;&amp; [[ -v AWS_DEFAULT_REGION ]] ; then</code>
+          
+          <code class="ruby">    : &quot;${_JFROG_INSTALL_URL:=https://getcli.jfrog.io}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="missed" data-hits="0" data-linenumber="19">
           
           
-          <code class="ruby">        # validate tool(s) exist.</code>
+          <code class="ruby">    if ! type -p jfrog ; then</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="19">
-          <span class="hits">24</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
           
-          <code class="ruby">        if ! type aws &gt;/dev/null 2&gt;&amp;1 ; then</code>
+          
+          <code class="ruby">        if ! type -p ./jfrog ; then</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="21">
           
-          <code class="ruby">            echo &quot;FATAL: &#39;aws&#39; command not found. Please install &#39;awscli&#39; package.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
           
-          <code class="ruby">            exit 1</code>
+          <code class="ruby">            ## TODO: Test cases with incorrect download URL</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">        fi</code>
+          <code class="ruby">            ## TODO: Check if download/install worked.</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="23">
-          <span class="hits">22</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">        _docker_ensure_cli</code>
+          
+          <code class="ruby">            ## TODO: Validate that we can run the binary.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">            curl -sfL &quot;${_JFROG_INSTALL_URL}&quot; | sh &gt; /dev/null 2&gt;&amp;1 || exit 1</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="25">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="25">
           
-          <code class="ruby">        echo &quot;FATAL: AWScli environment variables \$AWS_ACCESS_KEY_ID, \$AWS_SECRET_ACCESS_KEY&quot; 1&gt;&amp;2</code>
+          
+          <code class="ruby">            if [ -x ./jfrog ] ; then</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="26">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="26">
           
-          <code class="ruby">        echo &quot;or \$AWS_DEFAULT_REGION not set. Aborting.&quot; 1&gt;&amp;2</code>
+          
+          <code class="ruby">                echo &quot;./jfrog&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="27">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="27">
           
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+          
+          <code class="ruby">            else</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="28">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="28">
           
-          <code class="ruby">        exit 1</code>
+          
+          <code class="ruby">                echo &quot;FATAL: Failed to download/produce jfrog CLI. Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby">    fi</code>
+          <code class="ruby">                exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">}</code>
+          <code class="ruby">            fi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        fi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="21" data-linenumber="33">
-          <span class="hits">21</span>
-          
-          <code class="ruby">_docker_ensure_cli() {</code>
-        </li>
-      
-        <li class="covered" data-hits="44" data-linenumber="34">
-          <span class="hits">44</span>
-          
-          <code class="ruby">    if ! type docker &gt;/dev/null 2&gt;&amp;1 ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="35">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;FATAL: &#39;docker&#39; command not found. Please install docker engine/cli.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="36">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        exit 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
           <code class="ruby">    fi</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">_artifactory_ensure_environment() {</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">    if [[ -v ARTIFACTORY_URL ]] &amp;&amp; [[ -v ARTIFACTORY_USER ]] &amp;&amp; [[ -v ARTIFACTORY_PASSWORD ]] ; then</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">        _artifactory_ensure_cli</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="missed" data-hits="0" data-linenumber="40">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        echo &quot;FATAL: Artifactory environment variables \$ARTIFACTORY_URL, \$ARTIFACTORY_USER&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="41">
-          <span class="hits">18</span>
+        <li class="missed" data-hits="0" data-linenumber="41">
           
-          <code class="ruby">_dockerhub_ensure_environment() {</code>
+          
+          <code class="ruby">        echo &quot;or \$ARTIFACTORY_PASSWORD not set. Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="42">
-          <span class="hits">62</span>
+        <li class="missed" data-hits="0" data-linenumber="42">
           
-          <code class="ruby">    if [[ -v DOCKER_USERNAME ]] &amp;&amp; [[ -v DOCKER_PASSWORD ]] ; then</code>
+          
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="43">
-          <span class="hits">22</span>
+        <li class="missed" data-hits="0" data-linenumber="43">
           
-          <code class="ruby">        _docker_ensure_cli</code>
+          
+          <code class="ruby">        exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="16" data-linenumber="45">
-          <span class="hits">16</span>
-          
-          <code class="ruby">        echo &quot;FATAL: Docker Hub username/password environment variables &quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="16" data-linenumber="46">
-          <span class="hits">16</span>
-          
-          <code class="ruby">        echo &quot;       DOCKER_USERNAME and/or DOCKER_PASSWORD not set. Aborting.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="16" data-linenumber="47">
-          <span class="hits">16</span>
-          
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="16" data-linenumber="48">
-          <span class="hits">16</span>
-          
-          <code class="ruby">        exit 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
           <code class="ruby">    fi</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="covered" data-hits="16" data-linenumber="48">
+          <span class="hits">16</span>
+          
+          <code class="ruby">_aws_ensure_environment() {</code>
+        </li>
+      
+        <li class="covered" data-hits="86" data-linenumber="49">
+          <span class="hits">86</span>
+          
+          <code class="ruby">    if [[ -v AWS_ACCESS_KEY_ID ]] &amp;&amp; [[ -v AWS_SECRET_ACCESS_KEY ]] &amp;&amp; [[ -v AWS_DEFAULT_REGION ]] ; then</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby">        # validate tool(s) exist.</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="51">
+          <span class="hits">24</span>
+          
+          <code class="ruby">        if ! type -p aws &gt;/dev/null 2&gt;&amp;1 ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="52">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            echo &quot;FATAL: &#39;aws&#39; command not found. Please install &#39;awscli&#39; package.&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="53">
+          <span class="hits">2</span>
+          
+          <code class="ruby">            exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"># Argument: $1 = repository name; e.g. `madworx/docshell`.</code>
+          <code class="ruby">        fi</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="covered" data-hits="22" data-linenumber="55">
+          <span class="hits">22</span>
           
-          
-          <code class="ruby"># Argument: $2 = branch name (optional)</code>
+          <code class="ruby">        _docker_ensure_cli</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="57">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="57">
+          <span class="hits">8</span>
           
-          <code class="ruby">_github_doc_prepare() {    </code>
+          <code class="ruby">        echo &quot;FATAL: awscli environment variables \$AWS_ACCESS_KEY_ID, \$AWS_SECRET_ACCESS_KEY&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="58">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="8" data-linenumber="58">
+          <span class="hits">8</span>
           
-          <code class="ruby">    if [[ ! -v GH_TOKEN ]] ; then</code>
+          <code class="ruby">        echo &quot;or \$AWS_DEFAULT_REGION not set. Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="59">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;FATAL: GitHub token environment variable GH_TOKEN not set.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="60">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="61">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="8" data-linenumber="59">
+          <span class="hits">8</span>
           
           <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="62">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="8" data-linenumber="60">
+          <span class="hits">8</span>
           
           <code class="ruby">        exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="62">
+          
+          
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">    fi</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="65">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="21" data-linenumber="65">
+          <span class="hits">21</span>
           
-          <code class="ruby">    if [[ -z &quot;$1&quot; ]] ; then</code>
+          <code class="ruby">_docker_ensure_cli() {</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="66">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="44" data-linenumber="66">
+          <span class="hits">44</span>
           
-          <code class="ruby">        echo &quot;FATAL: Argument 1 (repository name, e.g. madworx/docshell) not set.&quot; 1&gt;&amp;2</code>
+          <code class="ruby">    if ! type -p docker &gt;/dev/null 2&gt;&amp;1 ; then</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
-          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
+          <code class="ruby">        echo &quot;FATAL: &#39;docker&#39; command not found. Please install docker engine/cli.&quot; 1&gt;&amp;2</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="68">
           <span class="hits">2</span>
           
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+          <code class="ruby">        exit 1</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="69">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="69">
           
-          <code class="ruby">        exit 1</code>
+          
+          <code class="ruby">    fi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">    fi</code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
@@ -516,58 +516,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="72">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="72">
           
-          <code class="ruby">    REPO=&quot;https://${GH_TOKEN}@github.com/$1&quot;</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="covered" data-hits="18" data-linenumber="73">
+          <span class="hits">18</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">_dockerhub_ensure_environment() {</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="74">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="62" data-linenumber="74">
+          <span class="hits">62</span>
           
-          <code class="ruby">    TMPDR=&quot;$(mktemp -d)&quot;</code>
+          <code class="ruby">    if [[ -v DOCKER_USERNAME ]] &amp;&amp; [[ -v DOCKER_PASSWORD ]] ; then</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="75">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="22" data-linenumber="75">
+          <span class="hits">22</span>
           
-          <code class="ruby">    git clone -q &quot;${REPO}&quot; &quot;${TMPDR}&quot; || exit 1</code>
+          <code class="ruby">        _docker_ensure_cli</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="76">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="76">
           
-          <code class="ruby">    pushd &quot;${TMPDR}&quot; &gt;/dev/null || exit 1</code>
+          
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="77">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="77">
+          <span class="hits">16</span>
           
-          <code class="ruby">    git config --local user.email &quot;support@travis-ci.org&quot;</code>
+          <code class="ruby">        echo &quot;FATAL: Docker Hub username/password environment variables &quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="78">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="78">
+          <span class="hits">16</span>
           
-          <code class="ruby">    git config --local user.name  &quot;Travis CI&quot;</code>
+          <code class="ruby">        echo &quot;       DOCKER_USERNAME and/or DOCKER_PASSWORD not set. Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="79">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="79">
+          <span class="hits">16</span>
           
-          <code class="ruby">    if [ ! -z &quot;$2&quot; ] ; then</code>
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="80">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="16" data-linenumber="80">
+          <span class="hits">16</span>
           
-          <code class="ruby">        git checkout &quot;$2&quot; &gt;/dev/null 2&gt;&amp;1 || exit 1</code>
+          <code class="ruby">        exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
@@ -576,226 +576,226 @@
           <code class="ruby">    fi</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="82">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="82">
           
-          <code class="ruby">    popd &gt;/dev/null || exit 1</code>
+          
+          <code class="ruby">}</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="83">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="83">
           
-          <code class="ruby">    echo &quot;${TMPDR}&quot;</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby">}</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># Argument: $1 = repository name; e.g. `madworx/docshell`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby"># Argument: $2 = branch name (optional)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">## @fn awsecr_login()</code>
+          <code class="ruby">#</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="covered" data-hits="7" data-linenumber="89">
+          <span class="hits">7</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">_github_doc_prepare() {    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="covered" data-hits="14" data-linenumber="90">
+          <span class="hits">14</span>
           
-          
-          <code class="ruby">## @brief Login to Amazon Elastic Container Registry. (ECR)</code>
+          <code class="ruby">    if [[ ! -v GH_TOKEN ]] ; then</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="covered" data-hits="2" data-linenumber="91">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">        echo &quot;FATAL: GitHub token environment variable GH_TOKEN not set.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="covered" data-hits="2" data-linenumber="92">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="93">
+        <li class="covered" data-hits="2" data-linenumber="93">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##  @b AWS_ACCESS_KEY_ID Specifies an AWS access key associated with an IAM user or role. @n</code>
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="covered" data-hits="2" data-linenumber="94">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##  @b AWS_SECRET_ACCESS_KEY Specifies the secret key associated with the access key. @n</code>
+          <code class="ruby">        exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">##  @b AWS_DEFAULT_REGION Specifies the AWS Region to send the request to. @n</code>
+          <code class="ruby">    fi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="covered" data-hits="12" data-linenumber="97">
+          <span class="hits">12</span>
           
-          
-          <code class="ruby">## @details   Outputs   the   full   AWS   ECR   repository   URL   to</code>
+          <code class="ruby">    if [[ -z &quot;$1&quot; ]] ; then</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="covered" data-hits="2" data-linenumber="98">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## `stdout`. (e.g. `https://&lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com`)</code>
+          <code class="ruby">        echo &quot;FATAL: Argument 1 (repository name, e.g. madworx/docshell) not set.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="covered" data-hits="2" data-linenumber="99">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="covered" data-hits="2" data-linenumber="100">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## @par Example</code>
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="covered" data-hits="2" data-linenumber="101">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## `$ export REGISTRY_URL=&quot;$(awsecr_login)&quot; || exit 1` @n</code>
+          <code class="ruby">        exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="102">
           
           
-          <code class="ruby">## `$ docker run &quot;${REGISTRY_URL}/madworx/robotframework-kicadlibrary&quot;` @n</code>
+          <code class="ruby">    fi</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="104">
-          
-          
-          <code class="ruby">## @ingroup AWS</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="105">
-          <span class="hits">6</span>
-          
-          <code class="ruby">awsecr_login() {</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="106">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    _aws_ensure_environment || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="28" data-linenumber="107">
-          <span class="hits">28</span>
-          
-          <code class="ruby">    LOGIN_STR=$(aws ecr get-login) || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="108">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    LOGIN_SH=${LOGIN_STR/-e none /}</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="109">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    REGISTRY_PATH=${LOGIN_SH/* /}</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="110">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    REGISTRY_PATH=${REGISTRY_PATH/https*:\/\//}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="111">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="112">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="104">
+          <span class="hits">10</span>
           
-          <code class="ruby">    sh - &lt;&lt;&lt;&quot;${LOGIN_SH}&quot; &gt;/dev/null 2&gt;&amp;1 || exit 1</code>
+          <code class="ruby">    REPO=&quot;https://${GH_TOKEN}@github.com/$1&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="113">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="105">
           
-          <code class="ruby">    echo &quot;${REGISTRY_PATH}&quot;</code>
+          
+          <code class="ruby">    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="covered" data-hits="20" data-linenumber="106">
+          <span class="hits">20</span>
           
-          
-          <code class="ruby">}</code>
+          <code class="ruby">    TMPDR=&quot;$(mktemp -d)&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="115">
+        <li class="covered" data-hits="10" data-linenumber="107">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    git clone -q &quot;${REPO}&quot; &quot;${TMPDR}&quot; || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="108">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    pushd &quot;${TMPDR}&quot; &gt;/dev/null || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="109">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    git config --local user.email &quot;support@travis-ci.org&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="110">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    git config --local user.name  &quot;Travis CI&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="111">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    if [ -n &quot;$2&quot; ] ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="112">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        git checkout &quot;$2&quot; &gt;/dev/null 2&gt;&amp;1 || exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="114">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    popd &gt;/dev/null || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="115">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    echo &quot;${TMPDR}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="117">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="118">
           
           
-          <code class="ruby">## @fn awsecr_push_image()</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="119">
@@ -807,7 +807,7 @@
         <li class="never" data-hits="" data-linenumber="120">
           
           
-          <code class="ruby">## @brief Push a locally built docker image to Amazon ECR.</code>
+          <code class="ruby">## @fn artifactory_setup()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="121">
@@ -819,7 +819,7 @@
         <li class="never" data-hits="" data-linenumber="122">
           
           
-          <code class="ruby">## @param image  Image identifier to push (e.g. `madworx/docshell:3.14`).</code>
+          <code class="ruby">## @brief (Possibly download) and configure the `jfrog` CLI utility.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="123">
@@ -837,19 +837,19 @@
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby">##  @b AWS_ACCESS_KEY_ID Specifies an AWS access key associated with an IAM user or role. @n</code>
+          <code class="ruby">##  @b ARTIFACTORY_URL Specifies the URL to your JFrog Artifactory installation. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="126">
           
           
-          <code class="ruby">##  @b AWS_SECRET_ACCESS_KEY Specifies the secret key associated with the access key. @n</code>
+          <code class="ruby">##  @b ARTIFACTORY_NAME Specifies the username to connect using. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">##  @b AWS_DEFAULT_REGION Specifies the AWS Region to send the request to. @n</code>
+          <code class="ruby">##  @b ARTIFACTORY_PASSWORD Specifies the password/apikey to connect using. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
@@ -861,265 +861,265 @@
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">## @details This  function will as  a side-effect tag the  local image</code>
+          <code class="ruby">## @par Example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="130">
           
           
-          <code class="ruby">## with the ECR  remote registry URL prefix. Will  output the complete</code>
+          <code class="ruby">## `$ artifactory_setup` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby">## path to the pushed image onto `stdout`</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="132">
           
           
-          <code class="ruby">## (e.g. 863710587213.dkr.ecr.eu-north-1.amazonaws.com/madworx/docker-netbsd:8.0).</code>
+          <code class="ruby">## @ingroup Artifactory</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="133">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">artifactory_setup() {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="134">
+        <li class="missed" data-hits="0" data-linenumber="134">
           
           
-          <code class="ruby">## @par (You do not need to call `awsecr_login()` before calling this function.)</code>
+          <code class="ruby">    JFROG_CLI=$(_artifactory_ensure_environment) || exit 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="135">
+        <li class="missed" data-hits="0" data-linenumber="135">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">    $JFROG_CLI rt config --interactive=false --url &quot;${ARTIFACTORY_URL}&quot; \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="missed" data-hits="0" data-linenumber="136">
           
           
-          <code class="ruby">## @par Example</code>
+          <code class="ruby">        --user &quot;${ARTIFACTORY_USER}&quot; --apikey &quot;${ARTIFACTORY_PASSWORD}&quot; || exit 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="missed" data-hits="0" data-linenumber="137">
           
           
-          <code class="ruby">## `$ docker build -t madworx/sample:1.0.1 .` @n</code>
+          <code class="ruby">    return</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby">## `$ FULL_PATH=&quot;$(awsecr_push_image madworx/sample:1.0.1)&quot; || exit 1` @n</code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="139">
           
           
-          <code class="ruby">## `$ docker run &quot;${FULL_PATH}&quot;`</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">## @ingroup AWS</code>
+          <code class="ruby">##</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="142">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="142">
           
-          <code class="ruby">awsecr_push_image() {</code>
+          
+          <code class="ruby">## @fn awsecr_login()</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="143">
-          <span class="hits">20</span>
-          
-          <code class="ruby">    _aws_ensure_environment || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="24" data-linenumber="144">
-          <span class="hits">24</span>
-          
-          <code class="ruby">    REGISTRY_URL=$(awsecr_login) || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="145">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    FULL_PATH=&quot;${REGISTRY_URL}/${1}&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="146">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    docker tag &quot;${1}&quot; &quot;${FULL_PATH}&quot; || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="147">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    docker push &quot;${FULL_PATH}&quot; &gt; /dev/null || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="148">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    echo &quot;${FULL_PATH}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="149">
-          
-          
-          <code class="ruby">}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="150">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="151">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="152">
+        <li class="never" data-hits="" data-linenumber="143">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="153">
+        <li class="never" data-hits="" data-linenumber="144">
           
           
-          <code class="ruby">## @fn dockerhub_push_image()</code>
+          <code class="ruby">## @brief Login to Amazon Elastic Container Registry. (ECR)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="154">
+        <li class="never" data-hits="" data-linenumber="145">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="155">
-          
-          
-          <code class="ruby">## @brief Push image to Docker Hub</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="156">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="157">
-          
-          
-          <code class="ruby">## @param image  Image identifier to push (e.g. `madworx/debian-archive:lenny`).</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="158">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="159">
+        <li class="never" data-hits="" data-linenumber="146">
           
           
           <code class="ruby">## @par Environment variables</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="160">
+        <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby">##  @b DOCKER_USERNAME Valid username for Docker Hub. @n</code>
+          <code class="ruby">##  @b AWS_ACCESS_KEY_ID Specifies an AWS access key associated with an IAM user or role. @n</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="161">
+        <li class="never" data-hits="" data-linenumber="148">
           
           
-          <code class="ruby">##  @b DOCKER_PASSWORD Valid password for Docker Hub. @n</code>
+          <code class="ruby">##  @b AWS_SECRET_ACCESS_KEY Specifies the secret key associated with the access key. @n</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="162">
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">##  @b AWS_DEFAULT_REGION Specifies the AWS Region to send the request to. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="163">
+        <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">## @details Pushes a docker image from the local machine to the Docker</code>
+          <code class="ruby">## @details   Outputs   the   full   AWS   ECR   repository   URL   to</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="164">
+        <li class="never" data-hits="" data-linenumber="152">
           
           
-          <code class="ruby">## Hub  repository,  logging  in   using  the  `$DOCKER_USERNAME`  and</code>
+          <code class="ruby">## `stdout`. (e.g. `https://&lt;aws_account_id&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com`)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="165">
-          
-          
-          <code class="ruby">## `$DOCKER_PASSWORD` environment  variables. You need to  have tagged</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="166">
-          
-          
-          <code class="ruby">## this image beforehand. (i.e. `docker tag`)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="167">
+        <li class="never" data-hits="" data-linenumber="153">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="168">
+        <li class="never" data-hits="" data-linenumber="154">
           
           
           <code class="ruby">## @par Example</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">## `$ export REGISTRY_URL=&quot;$(awsecr_login)&quot; || exit 1` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">## `$ docker run &quot;${REGISTRY_URL}/madworx/robotframework-kicadlibrary&quot;` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">## @ingroup AWS</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="159">
+          <span class="hits">6</span>
+          
+          <code class="ruby">awsecr_login() {</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="160">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    _aws_ensure_environment || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="161">
+          <span class="hits">28</span>
+          
+          <code class="ruby">    LOGIN_STR=$(aws ecr get-login) || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="162">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    LOGIN_SH=${LOGIN_STR/-e none /}</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="163">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    REGISTRY_PATH=${LOGIN_SH/* /}</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="164">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    REGISTRY_PATH=${REGISTRY_PATH/https*:\/\//}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="166">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    sh - &lt;&lt;&lt;&quot;${LOGIN_SH}&quot; &gt;/dev/null 2&gt;&amp;1 || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="167">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    echo &quot;${REGISTRY_PATH}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="169">
           
           
-          <code class="ruby">## `$ docker build -t madworx/debian-archive:lenny-04815d2 .` @n</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="170">
           
           
-          <code class="ruby">## &lt;em&gt;...perform testing of built docker image....&lt;/em&gt; @n</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="171">
           
           
-          <code class="ruby">## `$ docker tag madworx/debian-archive:lenny-04815d2 madworx/debian-archive:lenny` @n</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="172">
           
           
-          <code class="ruby">## `$ dockerhub_push_image madworx/debian-archive:lenny` @n</code>
+          <code class="ruby">## @fn awsecr_push_image()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="173">
@@ -1131,49 +1131,49 @@
         <li class="never" data-hits="" data-linenumber="174">
           
           
-          <code class="ruby">## @ingroup DockerHub</code>
+          <code class="ruby">## @brief Push a locally built docker image to Amazon ECR.</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="175">
-          <span class="hits">9</span>
+        <li class="never" data-hits="" data-linenumber="175">
           
-          <code class="ruby">dockerhub_push_image() {</code>
+          
+          <code class="ruby">##</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="176">
-          <span class="hits">18</span>
+        <li class="never" data-hits="" data-linenumber="176">
           
-          <code class="ruby">    _dockerhub_ensure_environment || exit 1</code>
+          
+          <code class="ruby">## @param image  Image identifier to push (e.g. `madworx/docshell:3.14`).</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="177">
-          <span class="hits">12</span>
+        <li class="never" data-hits="" data-linenumber="177">
           
-          <code class="ruby">    echo &quot;${DOCKER_PASSWORD}&quot; | docker login -u &quot;${DOCKER_USERNAME}&quot; --password-stdin &amp;&amp; \</code>
+          
+          <code class="ruby">##</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="178">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="178">
           
-          <code class="ruby">        docker push &quot;$1&quot;</code>
+          
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="179">
           
           
-          <code class="ruby">}</code>
+          <code class="ruby">##  @b AWS_ACCESS_KEY_ID Specifies an AWS access key associated with an IAM user or role. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="180">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">##  @b AWS_SECRET_ACCESS_KEY Specifies the secret key associated with the access key. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="181">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">##  @b AWS_DEFAULT_REGION Specifies the AWS Region to send the request to. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="182">
@@ -1185,37 +1185,37 @@
         <li class="never" data-hits="" data-linenumber="183">
           
           
-          <code class="ruby">## @fn dockerhub_set_description()</code>
+          <code class="ruby">## @details This  function will as  a side-effect tag the  local image</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="184">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## with the ECR  remote registry URL prefix. Will  output the complete</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="185">
           
           
-          <code class="ruby">## @brief Set the image description on Docker Hub.</code>
+          <code class="ruby">## path to the pushed image onto `stdout`</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="186">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## (e.g. 863710587213.dkr.ecr.eu-north-1.amazonaws.com/madworx/docker-netbsd:8.0).</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="187">
           
           
-          <code class="ruby">## @param repository  Repository name; e.g. `madworx/docshell`.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="188">
           
           
-          <code class="ruby">## @param filename    Filename/path containing description; e.g. `README.md`.</code>
+          <code class="ruby">## @par (You do not need to call `awsecr_login()` before calling this function.)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="189">
@@ -1227,301 +1227,301 @@
         <li class="never" data-hits="" data-linenumber="190">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby">## @par Example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="191">
           
           
-          <code class="ruby">##  @b DOCKER_USERNAME Valid username for Docker Hub. @n</code>
+          <code class="ruby">## `$ docker build -t madworx/sample:1.0.1 .` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="192">
           
           
-          <code class="ruby">##  @b DOCKER_PASSWORD Valid password for Docker Hub. @n</code>
+          <code class="ruby">## `$ FULL_PATH=&quot;$(awsecr_push_image madworx/sample:1.0.1)&quot; || exit 1` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="193">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## `$ docker run &quot;${FULL_PATH}&quot;`</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="194">
           
           
-          <code class="ruby">## @par Example</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="195">
           
           
-          <code class="ruby">## `$ git clone https://github.com/madworx/docshell` @n</code>
+          <code class="ruby">## @ingroup AWS</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="196">
+        <li class="covered" data-hits="10" data-linenumber="196">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">## `$ cd docshell` @n</code>
+          <code class="ruby">awsecr_push_image() {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="197">
-          
-          
-          <code class="ruby">## `$ dockerhub_set_description madworx/docshell README.md` @n</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="198">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="199">
-          
-          
-          <code class="ruby">## @ingroup DockerHub</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="200">
-          <span class="hits">9</span>
-          
-          <code class="ruby">dockerhub_set_description() {</code>
-        </li>
-      
-        <li class="covered" data-hits="20" data-linenumber="201">
+        <li class="covered" data-hits="20" data-linenumber="197">
           <span class="hits">20</span>
           
-          <code class="ruby">    _dockerhub_ensure_environment || exit 1</code>
+          <code class="ruby">    _aws_ensure_environment || exit 1</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="202">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="24" data-linenumber="198">
+          <span class="hits">24</span>
           
-          <code class="ruby">    : &quot;${_DOCKERHUB_URL:=https://hub.docker.com/v2}&quot;</code>
+          <code class="ruby">    REGISTRY_URL=$(awsecr_login) || exit 1</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="203">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="6" data-linenumber="199">
+          <span class="hits">6</span>
           
-          <code class="ruby">    echo &quot;Setting Docker Hub description...&quot;</code>
+          <code class="ruby">    FULL_PATH=&quot;${REGISTRY_URL}/${1}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="204">
-          <span class="hits">14</span>
-          
-          <code class="ruby">    if [ -z &quot;$1&quot; ] ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="205">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;FATAL: Missing argument 1 (repository name. e.g. madworx/docshell)&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="206">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="207">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        exit 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="208">
-          
-          
-          <code class="ruby">    fi</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="209">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="28" data-linenumber="210">
-          <span class="hits">28</span>
-          
-          <code class="ruby">    if [ -z &quot;$2&quot; ] || [ ! -r &quot;$2&quot; ] || [ -d &quot;$2&quot; ] ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="211">
+        <li class="covered" data-hits="8" data-linenumber="200">
           <span class="hits">8</span>
           
-          <code class="ruby">        echo &quot;FATAL: Argument 2 (file name containing description) missing, &quot; 1&gt;&amp;2</code>
+          <code class="ruby">    docker tag &quot;${1}&quot; &quot;${FULL_PATH}&quot; || exit 1</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="212">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        echo &quot;       or doesn&#39;t point to a readable entity. Aborting.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="213">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="214">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        exit 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="215">
-          
-          
-          <code class="ruby">    fi</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="216">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="217">
+        <li class="covered" data-hits="4" data-linenumber="201">
           <span class="hits">4</span>
           
-          <code class="ruby">    echo &quot;Logging onto Docker Hub...&quot;</code>
+          <code class="ruby">    docker push &quot;${FULL_PATH}&quot; &gt; /dev/null || exit 1</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="218">
+        <li class="covered" data-hits="4" data-linenumber="202">
           <span class="hits">4</span>
           
-          <code class="ruby">    PAYLOAD=&#39;{&quot;username&quot;: &quot;&#39;&quot;${DOCKER_USERNAME}&quot;&#39;&quot;, &quot;password&quot;: &quot;&#39;&quot;${DOCKER_PASSWORD}&quot;&#39;&quot;}&#39;</code>
+          <code class="ruby">    echo &quot;${FULL_PATH}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="219">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    TOKEN=$(curl -f -s -H &quot;Content-Type: application/json&quot; -X POST -d &quot;${PAYLOAD}&quot; &quot;${_DOCKERHUB_URL}/users/login/&quot; | jq -r &#39;.token&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="220">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="221">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    if [ -z &quot;${TOKEN}&quot; ] ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="222">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;FATAL: Unable to logon to Docker Hub using provided credentials&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="223">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;       DOCKER_USERNAME and/or DOCKER_PASSWORD incorrectly set. Aborting.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="224">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        exit 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="225">
-          
-          
-          <code class="ruby">    fi</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="226">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="227">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    echo &quot;Setting Docker Hub description of image $1 ....&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="228">
-          
-          
-          <code class="ruby">    # shellcheck disable=SC1117</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="229">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    perl -ne &quot;BEGIN{ print &#39;{\&quot;full_description\&quot;:\&quot;&#39;;} END{ print &#39;\&quot;}&#39; } s#\n#\\\n#msg;s#\&quot;#\\\\\&quot;#msg;print;&quot; &quot;$2&quot; | \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="230">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        curl -f \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="231">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             -s \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="232">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             -H &quot;Content-Type: application/json&quot; \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="233">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             -H &quot;Authorization: JWT ${TOKEN}&quot; \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="234">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             -X PATCH \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="235">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             -d@/dev/stdin \</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="236">
-          <span class="hits">2</span>
-          
-          <code class="ruby">             &quot;${_DOCKERHUB_URL}/repositories/$1/&quot; &gt;/dev/null</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="237">
+        <li class="never" data-hits="" data-linenumber="203">
           
           
           <code class="ruby">}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="238">
+        <li class="never" data-hits="" data-linenumber="204">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="239">
+        <li class="never" data-hits="" data-linenumber="205">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="206">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="207">
+          
+          
+          <code class="ruby">## @fn dockerhub_push_image()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="209">
+          
+          
+          <code class="ruby">## @brief Push image to Docker Hub</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="211">
+          
+          
+          <code class="ruby">## @param image  Image identifier to push (e.g. `madworx/debian-archive:lenny`).</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="212">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="213">
+          
+          
+          <code class="ruby">## @par Environment variables</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="214">
+          
+          
+          <code class="ruby">##  @b DOCKER_USERNAME Valid username for Docker Hub. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="215">
+          
+          
+          <code class="ruby">##  @b DOCKER_PASSWORD Valid password for Docker Hub. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="216">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="217">
+          
+          
+          <code class="ruby">## @details Pushes a docker image from the local machine to the Docker</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="218">
+          
+          
+          <code class="ruby">## Hub  repository,  logging  in   using  the  `$DOCKER_USERNAME`  and</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="219">
+          
+          
+          <code class="ruby">## `$DOCKER_PASSWORD` environment  variables. You need to  have tagged</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="220">
+          
+          
+          <code class="ruby">## this image beforehand. (i.e. `docker tag`)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="221">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="222">
+          
+          
+          <code class="ruby">## @par Example</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="223">
+          
+          
+          <code class="ruby">## `$ docker build -t madworx/debian-archive:lenny-04815d2 .` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="224">
+          
+          
+          <code class="ruby">## &lt;em&gt;...perform testing of built docker image....&lt;/em&gt; @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="225">
+          
+          
+          <code class="ruby">## `$ docker tag madworx/debian-archive:lenny-04815d2 madworx/debian-archive:lenny` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="226">
+          
+          
+          <code class="ruby">## `$ dockerhub_push_image madworx/debian-archive:lenny` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="227">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="228">
+          
+          
+          <code class="ruby">## @ingroup DockerHub</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="229">
+          <span class="hits">9</span>
+          
+          <code class="ruby">dockerhub_push_image() {</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="230">
+          <span class="hits">18</span>
+          
+          <code class="ruby">    _dockerhub_ensure_environment || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="231">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    echo &quot;${DOCKER_PASSWORD}&quot; | docker login -u &quot;${DOCKER_USERNAME}&quot; --password-stdin &amp;&amp; \</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="232">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        docker push &quot;$1&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="233">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="234">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="235">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="236">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="237">
+          
+          
+          <code class="ruby">## @fn dockerhub_set_description()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="238">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="239">
+          
+          
+          <code class="ruby">## @brief Set the image description on Docker Hub.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="240">
@@ -1533,67 +1533,67 @@
         <li class="never" data-hits="" data-linenumber="241">
           
           
-          <code class="ruby">## @fn github_pages_prepare()</code>
+          <code class="ruby">## @param repository  Repository name; e.g. `madworx/docshell`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="242">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @param filename    Filename/path containing description; e.g. `README.md`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="243">
           
           
-          <code class="ruby">## @brief Prepare a local directory for working with GitHub pages</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="244">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="245">
           
           
-          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docshell`.</code>
+          <code class="ruby">##  @b DOCKER_USERNAME Valid username for Docker Hub. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="246">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">##  @b DOCKER_PASSWORD Valid password for Docker Hub. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="247">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="248">
           
           
-          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
+          <code class="ruby">## @par Example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="249">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## `$ git clone https://github.com/madworx/docshell` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="250">
           
           
-          <code class="ruby">## @details Checks out  the given repository&#39;s `gh-pages`  branch in a</code>
+          <code class="ruby">## `$ cd docshell` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="251">
           
           
-          <code class="ruby">## temporary directory. Outputs the temporary directory on `stdout`.</code>
+          <code class="ruby">## `$ dockerhub_set_description madworx/docshell README.md` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="252">
@@ -1605,247 +1605,247 @@
         <li class="never" data-hits="" data-linenumber="253">
           
           
-          <code class="ruby">## @ingroup GitHub</code>
+          <code class="ruby">## @ingroup DockerHub</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="254">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="9" data-linenumber="254">
+          <span class="hits">9</span>
           
-          <code class="ruby">github_pages_prepare() {</code>
+          <code class="ruby">dockerhub_set_description() {</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="255">
+        <li class="covered" data-hits="20" data-linenumber="255">
+          <span class="hits">20</span>
+          
+          <code class="ruby">    _dockerhub_ensure_environment || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="256">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    : &quot;${_DOCKERHUB_URL:=https://hub.docker.com/v2}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="257">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    echo &quot;Setting Docker Hub description...&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="258">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    if [ -z &quot;$1&quot; ] ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="259">
           <span class="hits">2</span>
           
-          <code class="ruby">    _github_doc_prepare &quot;${1}&quot; &quot;gh-pages&quot; || exit 1</code>
+          <code class="ruby">        echo &quot;FATAL: Missing argument 1 (repository name. e.g. madworx/docshell)&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="256">
-          
-          
-          <code class="ruby">}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="257">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="258">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="259">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="260">
-          
-          
-          <code class="ruby">## @fn github_doc_commit()</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="261">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="262">
-          
-          
-          <code class="ruby">## @brief Commit previously prepared documentation</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="263">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="264">
-          
-          
-          <code class="ruby">## @param dir  Temporary directory returned from previous invocation of</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="265">
-          
-          
-          <code class="ruby">##              `github_(pages|wiki)_prepare()`.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="266">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="267">
-          
-          
-          <code class="ruby">## @par Environment variables</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="268">
-          
-          
-          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="269">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="270">
-          
-          
-          <code class="ruby">## @ingroup GitHub</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="271">
-          <span class="hits">6</span>
-          
-          <code class="ruby">github_doc_commit() {</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="272">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    if [[ -z &quot;$1&quot; ]] ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="273">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;FATAL: Argument 1 (temporary directory) not set.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="274">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="275">
+        <li class="covered" data-hits="2" data-linenumber="260">
           <span class="hits">2</span>
           
           <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="276">
+        <li class="covered" data-hits="2" data-linenumber="261">
           <span class="hits">2</span>
           
           <code class="ruby">        exit 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="277">
+        <li class="never" data-hits="" data-linenumber="262">
           
           
           <code class="ruby">    fi</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="278">
+        <li class="never" data-hits="" data-linenumber="263">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="28" data-linenumber="264">
+          <span class="hits">28</span>
+          
+          <code class="ruby">    if [ -z &quot;$2&quot; ] || [ ! -r &quot;$2&quot; ] || [ -d &quot;$2&quot; ] ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="265">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;FATAL: Argument 2 (file name containing description) missing, &quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="266">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;       or doesn&#39;t point to a readable entity. Aborting.&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="267">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="268">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="269">
+          
+          
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="270">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="271">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    echo &quot;Logging onto Docker Hub...&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="272">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    PAYLOAD=&#39;{&quot;username&quot;: &quot;&#39;&quot;${DOCKER_USERNAME}&quot;&#39;&quot;, &quot;password&quot;: &quot;&#39;&quot;${DOCKER_PASSWORD}&quot;&#39;&quot;}&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="273">
           <span class="hits">12</span>
           
-          <code class="ruby">    cd &quot;$1&quot; || exit 1</code>
+          <code class="ruby">    TOKEN=$(curl -f -s -H &quot;Content-Type: application/json&quot; -X POST -d &quot;${PAYLOAD}&quot; &quot;${_DOCKERHUB_URL}/users/login/&quot; | jq -r &#39;.token&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="279">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="274">
           
-          <code class="ruby">    git add -A . || exit 1</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="280">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="275">
+          <span class="hits">4</span>
           
-          <code class="ruby">    git commit -m &#39;Automated documentation update&#39; -a || return 0</code>
+          <code class="ruby">    if [ -z &quot;${TOKEN}&quot; ] ; then</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="281">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="2" data-linenumber="276">
+          <span class="hits">2</span>
           
-          <code class="ruby">    git push</code>
+          <code class="ruby">        echo &quot;FATAL: Unable to logon to Docker Hub using provided credentials&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="277">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        echo &quot;       DOCKER_USERNAME and/or DOCKER_PASSWORD incorrectly set. Aborting.&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="278">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="279">
+          
+          
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="280">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="281">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    echo &quot;Setting Docker Hub description of image $1 ....&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="282">
           
           
-          <code class="ruby">}</code>
+          <code class="ruby">    # shellcheck disable=SC1117</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="283">
+        <li class="covered" data-hits="2" data-linenumber="283">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    perl -ne &quot;BEGIN{ print &#39;{\&quot;full_description\&quot;:\&quot;&#39;;} END{ print &#39;\&quot;}&#39; } s#\n#\\\n#msg;s#\&quot;#\\\\\&quot;#msg;print;&quot; &quot;$2&quot; | \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="284">
+        <li class="covered" data-hits="2" data-linenumber="284">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        curl -f \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="285">
+        <li class="covered" data-hits="2" data-linenumber="285">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">             -s \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="286">
+        <li class="covered" data-hits="2" data-linenumber="286">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## @fn github_releases_get_latest()</code>
+          <code class="ruby">             -H &quot;Content-Type: application/json&quot; \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="287">
+        <li class="covered" data-hits="2" data-linenumber="287">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">             -H &quot;Authorization: JWT ${TOKEN}&quot; \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="288">
+        <li class="covered" data-hits="2" data-linenumber="288">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## @brief Returns the latest tagged version on the given repository.</code>
+          <code class="ruby">             -X PATCH \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="289">
+        <li class="covered" data-hits="2" data-linenumber="289">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">             -d@/dev/stdin \</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="290">
+        <li class="covered" data-hits="2" data-linenumber="290">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docker-minix`.</code>
+          <code class="ruby">             &quot;${_DOCKERHUB_URL}/repositories/$1/&quot; &gt;/dev/null</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="291">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="292">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="293">
           
           
-          <code class="ruby">##  @b GH_TOKEN Only required if querying a private repository. @n</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="294">
@@ -1857,109 +1857,109 @@
         <li class="never" data-hits="" data-linenumber="295">
           
           
-          <code class="ruby">## @details @par @b Please note: @n</code>
+          <code class="ruby">## @fn github_pages_prepare()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="296">
           
           
-          <code class="ruby">## There  is  a discrepancy  between  the  GitHub &quot;Releases  API&quot;  vs.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="297">
           
           
-          <code class="ruby">## what&#39;s  displayed on  the GitHub  web page.  Releases displayed  as</code>
+          <code class="ruby">## @brief Prepare a local directory for working with GitHub pages</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="298">
           
           
-          <code class="ruby">## &quot;releases&quot; on  the GitHub web  page is not  necessarily &quot;releases&quot;,</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="299">
           
           
-          <code class="ruby">## but actually tags.   Therefore, we instead look at  the actual tags</code>
+          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docshell`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="300">
           
           
-          <code class="ruby">## since this maps better to expected UX.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="301">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="302">
           
           
-          <code class="ruby">## @ingroup GitHub</code>
+          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="303">
-          <span class="hits">3</span>
-          
-          <code class="ruby">github_releases_get_latest() {</code>
-        </li>
-      
-        <li class="covered" data-hits="16" data-linenumber="304">
-          <span class="hits">16</span>
-          
-          <code class="ruby">    JSON=$(curl -fs &quot;https://${GH_TOKEN:+$GH_TOKEN@}api.github.com/repos/$1/tags&quot;) || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="305">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    LATEST_TAG=&quot;$(jq -r &#39;.[0].name&#39; &lt;&lt;&lt;&quot;${JSON}&quot;)&quot; || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="306">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    LATEST_TAG=&quot;$(echo &quot;${LATEST_TAG}&quot; | sed &#39;s#[^a-zA-Z0-9.,_+-]##g&#39;)&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="307">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    echo $LATEST_TAG</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="308">
-          
-          
-          <code class="ruby">}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="309">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="310">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="311">
+        <li class="never" data-hits="" data-linenumber="303">
           
           
           <code class="ruby">##</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="304">
+          
+          
+          <code class="ruby">## @details Checks out  the given repository&#39;s `gh-pages`  branch in a</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="305">
+          
+          
+          <code class="ruby">## temporary directory. Outputs the temporary directory on `stdout`.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="306">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="307">
+          
+          
+          <code class="ruby">## @ingroup GitHub</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="308">
+          <span class="hits">1</span>
+          
+          <code class="ruby">github_pages_prepare() {</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="309">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    _github_doc_prepare &quot;${1}&quot; &quot;gh-pages&quot; || exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="310">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="311">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="312">
           
           
-          <code class="ruby">## @fn github_wiki_commit()</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="313">
@@ -1971,7 +1971,7 @@
         <li class="never" data-hits="" data-linenumber="314">
           
           
-          <code class="ruby">## @brief Commit previously prepared wiki directory.</code>
+          <code class="ruby">## @fn github_doc_commit()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="315">
@@ -1983,163 +1983,163 @@
         <li class="never" data-hits="" data-linenumber="316">
           
           
-          <code class="ruby">## @deprecated  This   function  is   deprecated.   Use   the  generic</code>
+          <code class="ruby">## @brief Commit previously prepared documentation</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="317">
           
           
-          <code class="ruby">## `github_doc_commit()` function instead.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="318">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @param dir  Temporary directory returned from previous invocation of</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="319">
           
           
-          <code class="ruby">## @param dir  Temporary directory  returned  from  previous call  to</code>
+          <code class="ruby">##              `github_(pages|wiki)_prepare()`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="320">
           
           
-          <code class="ruby">##            `github_(pages|wiki)_prepare()`.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="321">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="322">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="323">
           
           
-          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="324">
           
           
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="325">
-          
-          
           <code class="ruby">## @ingroup GitHub</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="326">
+        <li class="covered" data-hits="6" data-linenumber="325">
+          <span class="hits">6</span>
+          
+          <code class="ruby">github_doc_commit() {</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="326">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    if [[ -z &quot;$1&quot; ]] ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="327">
           <span class="hits">2</span>
           
-          <code class="ruby">github_wiki_commit() {</code>
+          <code class="ruby">        echo &quot;FATAL: Argument 1 (temporary directory) not set.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="327">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="328">
+          <span class="hits">2</span>
           
-          <code class="ruby">    github_doc_commit &quot;$1&quot;</code>
+          <code class="ruby">        echo &quot;       Aborting.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="328">
+        <li class="covered" data-hits="2" data-linenumber="329">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">}</code>
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="329">
+        <li class="covered" data-hits="2" data-linenumber="330">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="330">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">        exit 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="331">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">    fi</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="332">
+        <li class="covered" data-hits="12" data-linenumber="332">
+          <span class="hits">12</span>
           
-          
-          <code class="ruby">## @fn github_wiki_prepare()</code>
+          <code class="ruby">    cd &quot;$1&quot; || exit 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="333">
+        <li class="covered" data-hits="10" data-linenumber="333">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">    git add -A . || exit 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="334">
+        <li class="covered" data-hits="6" data-linenumber="334">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">## @brief Prepare a local directory for working with GitHub Wiki repo.</code>
+          <code class="ruby">    git commit -m &#39;Automated documentation update&#39; -a || return 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="335">
+        <li class="covered" data-hits="6" data-linenumber="335">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">    git push</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="336">
           
           
-          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docshell`.</code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="337">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="338">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="339">
           
           
-          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="340">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @fn github_releases_get_latest()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="341">
           
           
-          <code class="ruby">## @details Outputs  the temporary  directory name you&#39;re  supposed to</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="342">
           
           
-          <code class="ruby">## put the Wiki files into to `stdout`.</code>
+          <code class="ruby">## @brief Returns the latest tagged version on the given repository.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="343">
@@ -2151,133 +2151,133 @@
         <li class="never" data-hits="" data-linenumber="344">
           
           
-          <code class="ruby">## @ingroup GitHub</code>
+          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docker-minix`.</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="345">
-          <span class="hits">2</span>
-          
-          <code class="ruby">github_wiki_prepare() {</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="346">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    TMPDR=$(_github_doc_prepare &quot;${1}.wiki.git&quot;) || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="347">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    pushd &quot;${TMPDR}&quot; &gt;/dev/null || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="348">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    git rm -r . &gt;/dev/null 2&gt;&amp;1 || true</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="349">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    popd &gt;/dev/null || exit 1</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="350">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    echo &quot;${TMPDR}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="351">
-          
-          
-          <code class="ruby">}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="352">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="353">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="354">
+        <li class="never" data-hits="" data-linenumber="345">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="355">
-          
-          
-          <code class="ruby">## @fn is_travis_branch_push()</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="356">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="357">
-          
-          
-          <code class="ruby">## @brief Check if invoked from Travis CI due to a push event on a specific branch.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="358">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="359">
-          
-          
-          <code class="ruby">## @param branch  Branch name to compare to</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="360">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="361">
+        <li class="never" data-hits="" data-linenumber="346">
           
           
           <code class="ruby">## @par Environment variables</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="362">
+        <li class="never" data-hits="" data-linenumber="347">
           
           
-          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
+          <code class="ruby">##  @b GH_TOKEN Only required if querying a private repository. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="348">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="349">
+          
+          
+          <code class="ruby">## @details @par @b Please note: @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="350">
+          
+          
+          <code class="ruby">## There  is  a discrepancy  between  the  GitHub &quot;Releases  API&quot;  vs.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="351">
+          
+          
+          <code class="ruby">## what&#39;s  displayed on  the GitHub  web page.  Releases displayed  as</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="352">
+          
+          
+          <code class="ruby">## &quot;releases&quot; on  the GitHub web  page is not  necessarily &quot;releases&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="353">
+          
+          
+          <code class="ruby">## but actually tags.   Therefore, we instead look at  the actual tags</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="354">
+          
+          
+          <code class="ruby">## since this maps better to expected UX.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="355">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="356">
+          
+          
+          <code class="ruby">## @ingroup GitHub</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="357">
+          <span class="hits">3</span>
+          
+          <code class="ruby">github_releases_get_latest() {</code>
+        </li>
+      
+        <li class="covered" data-hits="16" data-linenumber="358">
+          <span class="hits">16</span>
+          
+          <code class="ruby">    JSON=$(curl -fs &quot;https://${GH_TOKEN:+$GH_TOKEN@}api.github.com/repos/$1/tags&quot;) || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="359">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    LATEST_TAG=&quot;$(jq -r &#39;.[0].name&#39; &lt;&lt;&lt;&quot;${JSON}&quot;)&quot; || exit 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="360">
+          
+          
+          <code class="ruby">    # shellcheck disable=SC2001</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="361">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    LATEST_TAG=&quot;$(echo &quot;${LATEST_TAG}&quot; | sed &#39;s#[^a-zA-Z0-9.,_+-]##g&#39;)&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="362">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    echo &quot;${LATEST_TAG}&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="363">
           
           
-          <code class="ruby">##  indicating event type. @n</code>
+          <code class="ruby">}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="364">
           
           
-          <code class="ruby">##  @b  TRAVIS_BRANCH Variable  set  by Travis  CI during  build-time,</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="365">
           
           
-          <code class="ruby">##  indicating which branch we&#39;re on. @n</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="366">
@@ -2289,73 +2289,73 @@
         <li class="never" data-hits="" data-linenumber="367">
           
           
-          <code class="ruby">## @details Return a zero status code if this is refering to a push on</code>
+          <code class="ruby">## @fn github_wiki_commit()</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="368">
           
           
-          <code class="ruby">## the branch given  as argument.  If any of  the required environment</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="369">
           
           
-          <code class="ruby">## variables  are missing,  will  emit error  message  on stderr,  but</code>
+          <code class="ruby">## @brief Commit previously prepared wiki directory.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="370">
           
           
-          <code class="ruby">## containue anyway  and assume that this  is not a push  event on the</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="371">
           
           
-          <code class="ruby">## desired  branch. Please  note  that this  might  break your  script</code>
+          <code class="ruby">## @deprecated  This   function  is   deprecated.   Use   the  generic</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="372">
           
           
-          <code class="ruby">## execution  if  running with  `-o  pipefail`  and/or `set  -eE`.   A</code>
+          <code class="ruby">## `github_doc_commit()` function instead.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="373">
           
           
-          <code class="ruby">## work-around  for  that  fact  is described  below  in  the  example</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="374">
           
           
-          <code class="ruby">## section.</code>
+          <code class="ruby">## @param dir  Temporary directory  returned  from  previous call  to</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="375">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">##            `github_(pages|wiki)_prepare()`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="376">
           
           
-          <code class="ruby">## @par Example</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="377">
           
           
-          <code class="ruby">## `# Below will fail on -opipefail, -eE etc.` @n</code>
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="378">
           
           
-          <code class="ruby">## `$ is_travis_branch_push devel &amp;&amp; dockerhub_push_image madworx/qemu:dev` @n</code>
+          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="379">
@@ -2367,199 +2367,199 @@
         <li class="never" data-hits="" data-linenumber="380">
           
           
-          <code class="ruby">## `# Below is a work-around for above behaviour.` @n</code>
+          <code class="ruby">## @ingroup GitHub</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="381">
+        <li class="covered" data-hits="2" data-linenumber="381">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">## `$ ! is_travis_branch_push devel &amp;&amp; true || dockerhub_push_image madworx/qemu:dev` @n</code>
+          <code class="ruby">github_wiki_commit() {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="382">
+        <li class="covered" data-hits="4" data-linenumber="382">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">##</code>
+          <code class="ruby">    github_doc_commit &quot;$1&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="383">
           
           
-          <code class="ruby">## @ingroup TravisCI</code>
+          <code class="ruby">}</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="384">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="384">
           
-          <code class="ruby">is_travis_branch_push() {   </code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="385">
-          <span class="hits">20</span>
+        <li class="never" data-hits="" data-linenumber="385">
           
-          <code class="ruby">    if [[ ! -v TRAVIS_EVENT_TYPE ]] ; then</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="386">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="386">
           
-          <code class="ruby">        echo &quot;WARNING: Travis CI environment variable TRAVIS_EVENT_TYPE not set.&quot;    1&gt;&amp;2</code>
+          
+          <code class="ruby">##</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="387">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="387">
           
-          <code class="ruby">        echo &quot;         Unable to identify if this commit is related to PR or merge.&quot; 1&gt;&amp;2</code>
+          
+          <code class="ruby">## @fn github_wiki_prepare()</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="388">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="388">
           
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+          
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="389">
           
           
-          <code class="ruby">    fi</code>
+          <code class="ruby">## @brief Prepare a local directory for working with GitHub Wiki repo.</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="390">
-          <span class="hits">20</span>
-          
-          <code class="ruby">    if [[ ! -v TRAVIS_BRANCH ]] ; then</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="391">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        echo &quot;WARNING: Travis CI environment variable TRAVIS_BRANCH not set.&quot;          1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="392">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        echo &quot;         We&#39;ll assume this isn&#39;t related to a push on the \`$1&#39; branch.&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="393">
-          <span class="hits">8</span>
-          
-          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="394">
-          
-          
-          <code class="ruby">    fi</code>
-        </li>
-      
-        <li class="covered" data-hits="32" data-linenumber="395">
-          <span class="hits">32</span>
-          
-          <code class="ruby">    [[ &quot;${TRAVIS_EVENT_TYPE}&quot; == &quot;push&quot; ]] &amp;&amp; [[ &quot;${TRAVIS_BRANCH}&quot; == &quot;$1&quot; ]]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="396">
-          
-          
-          <code class="ruby">}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="397">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="398">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="399">
+        <li class="never" data-hits="" data-linenumber="390">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="400">
+        <li class="never" data-hits="" data-linenumber="391">
           
           
-          <code class="ruby">## @fn is_travis_master_push()</code>
+          <code class="ruby">## @param repository  GitHub repository; e.g. `madworx/docshell`.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="401">
+        <li class="never" data-hits="" data-linenumber="392">
           
           
           <code class="ruby">##</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="402">
-          
-          
-          <code class="ruby">## @brief Check  if invoked  from Travis  CI due  to push  on `master`</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="403">
-          
-          
-          <code class="ruby">## branch.</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="404">
-          
-          
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="405">
+        <li class="never" data-hits="" data-linenumber="393">
           
           
           <code class="ruby">## @par Environment variables</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="406">
+        <li class="never" data-hits="" data-linenumber="394">
           
           
-          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
+          <code class="ruby">##  @b GH_TOKEN Valid GitHub personal access token. @n</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="407">
-          
-          
-          <code class="ruby">##  indicating event type. @n</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="408">
-          
-          
-          <code class="ruby">##  @b  TRAVIS_BRANCH Variable  set  by Travis  CI during  build-time,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="409">
-          
-          
-          <code class="ruby">##  indicating which branch we&#39;re on. @n</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="410">
+        <li class="never" data-hits="" data-linenumber="395">
           
           
           <code class="ruby">##</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="396">
+          
+          
+          <code class="ruby">## @details Outputs  the temporary  directory name you&#39;re  supposed to</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="397">
+          
+          
+          <code class="ruby">## put the Wiki files into to `stdout`.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="398">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="399">
+          
+          
+          <code class="ruby">## @ingroup GitHub</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="400">
+          <span class="hits">2</span>
+          
+          <code class="ruby">github_wiki_prepare() {</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="401">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    TMPDR=$(_github_doc_prepare &quot;${1}.wiki.git&quot;) || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="402">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    pushd &quot;${TMPDR}&quot; &gt;/dev/null || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="403">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    git rm -r . &gt;/dev/null 2&gt;&amp;1 || true</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="404">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    popd &gt;/dev/null || exit 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="405">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    echo &quot;${TMPDR}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="406">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="407">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="408">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="409">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="410">
+          
+          
+          <code class="ruby">## @fn is_travis_branch_push()</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="411">
           
           
-          <code class="ruby">## @details Return a  zero status code if this is  referring to a push</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="412">
           
           
-          <code class="ruby">## to the `master` branch.</code>
+          <code class="ruby">## @brief Check if invoked from Travis CI due to a push event on a specific branch.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="413">
@@ -2571,202 +2571,532 @@
         <li class="never" data-hits="" data-linenumber="414">
           
           
-          <code class="ruby">## @par Example</code>
+          <code class="ruby">## @param branch  Branch name to compare to</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="415">
           
           
-          <code class="ruby">## `# Below will fail on -opipefail, -eE etc.` @n</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="416">
           
           
-          <code class="ruby">## `$ is_travis_master_push &amp;&amp; dockerhub_push_image madworx/qemu` @n</code>
+          <code class="ruby">## @par Environment variables</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="417">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="418">
           
           
-          <code class="ruby">## `# Below is a work-around for above behaviour.` @n</code>
+          <code class="ruby">##  indicating event type. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="419">
           
           
-          <code class="ruby">## `$ ! is_travis_master_push &amp;&amp; true || dockerhub_push_image madworx/qemu` @n</code>
+          <code class="ruby">##  @b  TRAVIS_BRANCH Variable  set  by Travis  CI during  build-time,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="420">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">##  indicating which branch we&#39;re on. @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="421">
           
           
-          <code class="ruby">## @ingroup TravisCI</code>
+          <code class="ruby">##</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="422">
-          <span class="hits">5</span>
+        <li class="never" data-hits="" data-linenumber="422">
           
-          <code class="ruby">is_travis_master_push() {</code>
+          
+          <code class="ruby">## @details Return a zero status code if this is refering to a push on</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="423">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="423">
           
-          <code class="ruby">    is_travis_branch_push master</code>
+          
+          <code class="ruby">## the branch given  as argument.  If any of  the required environment</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="424">
           
           
-          <code class="ruby">}</code>
+          <code class="ruby">## variables  are missing,  will  emit error  message  on stderr,  but</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="425">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">## containue anyway  and assume that this  is not a push  event on the</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="426">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">## desired  branch. Please  note  that this  might  break your  script</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="427">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## execution  if  running with  `-o  pipefail`  and/or `set  -eE`.   A</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="428">
           
           
-          <code class="ruby">## @fn is_travis_cron()</code>
+          <code class="ruby">## work-around  for  that  fact  is described  below  in  the  example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="429">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## section.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="430">
           
           
-          <code class="ruby">## @brief Check  if invoked  from Travis  CI due  to a cron event.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="431">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## @par Example</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="432">
           
           
-          <code class="ruby">## @par Environment variables</code>
+          <code class="ruby">## `# Below will fail on -opipefail, -eE etc.` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="433">
           
           
-          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
+          <code class="ruby">## `$ is_travis_branch_push devel &amp;&amp; dockerhub_push_image madworx/qemu:dev` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="434">
           
           
-          <code class="ruby">##  indicating event type. @n</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="435">
           
           
-          <code class="ruby">##</code>
+          <code class="ruby">## `# Below is a work-around for above behaviour.` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="436">
           
           
-          <code class="ruby">## @details Return  a zero status code  if this is triggerd  by Travis</code>
+          <code class="ruby">## `$ ! is_travis_branch_push devel &amp;&amp; true || dockerhub_push_image madworx/qemu:dev` @n</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="437">
           
           
-          <code class="ruby">## cron.</code>
+          <code class="ruby">##</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="438">
           
           
-          <code class="ruby">##</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="439">
-          
-          
           <code class="ruby">## @ingroup TravisCI</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="440">
+        <li class="covered" data-hits="10" data-linenumber="439">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">is_travis_cron() {</code>
+          <code class="ruby">is_travis_branch_push() {   </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="441">
-          
+        <li class="covered" data-hits="20" data-linenumber="440">
+          <span class="hits">20</span>
           
           <code class="ruby">    if [[ ! -v TRAVIS_EVENT_TYPE ]] ; then</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="442">
-          
+        <li class="covered" data-hits="8" data-linenumber="441">
+          <span class="hits">8</span>
           
           <code class="ruby">        echo &quot;WARNING: Travis CI environment variable TRAVIS_EVENT_TYPE not set.&quot;    1&gt;&amp;2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="443">
-          
+        <li class="covered" data-hits="8" data-linenumber="442">
+          <span class="hits">8</span>
           
           <code class="ruby">        echo &quot;         Unable to identify if this commit is related to PR or merge.&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="444">
-          
+        <li class="covered" data-hits="8" data-linenumber="443">
+          <span class="hits">8</span>
           
           <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="445">
+        <li class="never" data-hits="" data-linenumber="444">
           
           
           <code class="ruby">    fi</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="446">
+        <li class="covered" data-hits="20" data-linenumber="445">
+          <span class="hits">20</span>
+          
+          <code class="ruby">    if [[ ! -v TRAVIS_BRANCH ]] ; then</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="446">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;WARNING: Travis CI environment variable TRAVIS_BRANCH not set.&quot;          1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="447">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;         We&#39;ll assume this isn&#39;t related to a push on the \`$1&#39; branch.&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="448">
+          <span class="hits">8</span>
+          
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="449">
+          
+          
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="covered" data-hits="32" data-linenumber="450">
+          <span class="hits">32</span>
+          
+          <code class="ruby">    [[ &quot;${TRAVIS_EVENT_TYPE}&quot; == &quot;push&quot; ]] &amp;&amp; [[ &quot;${TRAVIS_BRANCH}&quot; == &quot;$1&quot; ]]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="451">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="452">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="453">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="454">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="455">
+          
+          
+          <code class="ruby">## @fn is_travis_master_push()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="456">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="457">
+          
+          
+          <code class="ruby">## @brief Check  if invoked  from Travis  CI due  to push  on `master`</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="458">
+          
+          
+          <code class="ruby">## branch.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="459">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="460">
+          
+          
+          <code class="ruby">## @par Environment variables</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="461">
+          
+          
+          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="462">
+          
+          
+          <code class="ruby">##  indicating event type. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="463">
+          
+          
+          <code class="ruby">##  @b  TRAVIS_BRANCH Variable  set  by Travis  CI during  build-time,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="464">
+          
+          
+          <code class="ruby">##  indicating which branch we&#39;re on. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="465">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="466">
+          
+          
+          <code class="ruby">## @details Return a  zero status code if this is  referring to a push</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="467">
+          
+          
+          <code class="ruby">## to the `master` branch.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="468">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="469">
+          
+          
+          <code class="ruby">## @par Example</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="470">
+          
+          
+          <code class="ruby">## `# Below will fail on -opipefail, -eE etc.` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="471">
+          
+          
+          <code class="ruby">## `$ is_travis_master_push &amp;&amp; dockerhub_push_image madworx/qemu` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="472">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="473">
+          
+          
+          <code class="ruby">## `# Below is a work-around for above behaviour.` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="474">
+          
+          
+          <code class="ruby">## `$ ! is_travis_master_push &amp;&amp; true || dockerhub_push_image madworx/qemu` @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="475">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="476">
+          
+          
+          <code class="ruby">## @ingroup TravisCI</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="477">
+          <span class="hits">5</span>
+          
+          <code class="ruby">is_travis_master_push() {</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="478">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    is_travis_branch_push master</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="479">
+          
+          
+          <code class="ruby">}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="480">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="481">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="482">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="483">
+          
+          
+          <code class="ruby">## @fn is_travis_cron()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="484">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="485">
+          
+          
+          <code class="ruby">## @brief Check  if invoked  from Travis  CI due  to a cron event.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="486">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="487">
+          
+          
+          <code class="ruby">## @par Environment variables</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="488">
+          
+          
+          <code class="ruby">##  @b TRAVIS_EVENT_TYPE Variable set  by Travis CI during build-time,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="489">
+          
+          
+          <code class="ruby">##  indicating event type. @n</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="490">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="491">
+          
+          
+          <code class="ruby">## @details Return  a zero status code  if this is triggerd  by Travis</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="492">
+          
+          
+          <code class="ruby">## cron.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="493">
+          
+          
+          <code class="ruby">##</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="494">
+          
+          
+          <code class="ruby">## @ingroup TravisCI</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="495">
+          
+          
+          <code class="ruby">is_travis_cron() {</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="496">
+          
+          
+          <code class="ruby">    if [[ ! -v TRAVIS_EVENT_TYPE ]] ; then</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="497">
+          
+          
+          <code class="ruby">        echo &quot;WARNING: Travis CI environment variable TRAVIS_EVENT_TYPE not set.&quot;    1&gt;&amp;2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="498">
+          
+          
+          <code class="ruby">        echo &quot;         Unable to identify if this commit is related to PR or merge.&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="499">
+          
+          
+          <code class="ruby">        echo &quot;&quot; 1&gt;&amp;2</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="500">
+          
+          
+          <code class="ruby">    fi</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="501">
           
           
           <code class="ruby">    [[ &quot;${TRAVIS_EVENT_TYPE}&quot; == &quot;cron&quot; ]]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="447">
+        <li class="never" data-hits="" data-linenumber="502">
           
           
           <code class="ruby">}</code>
