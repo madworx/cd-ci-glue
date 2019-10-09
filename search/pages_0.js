@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]]
+  ['cd_2dci_2dglue',['cd-ci-glue',['../index.html',1,'']]]
 ];
