@@ -1,5 +1,5 @@
 {
-  "/bin/bash /usr/bin/bats ./test/001_dockerhub.bats ./test/002_github_pages.bats ./test/003_travis.bats ./test/004_github_wiki.bats ./test/005_awsecr.bats ./test/006_github_releases.bats ./test/007_artifactory.bats": {
+  "/bin/bash /usr/bin/bats ./test/000_missing_jq.bats ./test/001_dockerhub.bats ./test/002_github_pages.bats ./test/003_travis.bats ./test/004_github_wiki.bats ./test/005_awsecr.bats ./test/006_github_releases.bats ./test/007_artifactory.bats": {
     "coverage": {
       "/app/src/cd-ci-glue.bash": [
         null,
@@ -15,6 +15,13 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        13,
+        29,
+        1,
+        1,
         null,
         null,
         null,
@@ -257,6 +264,7 @@
         null,
         9,
         20,
+        20,
         14,
         14,
         14,
@@ -359,6 +367,7 @@
         null,
         null,
         3,
+        6,
         16,
         4,
         null,
@@ -505,6 +514,6 @@
         0
       ]
     },
-    "timestamp": 1570627384
+    "timestamp": 1597947023
   }
 }
