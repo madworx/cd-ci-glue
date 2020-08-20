@@ -14,6 +14,13 @@
 
 # Private functions - do not invoke directly!
 
+_ensure_jq() {
+    if ! type -p jq >/dev/null ; then
+        echo "FATAL: 'jq' binary not available on system. Aborting." 1>&2
+        exit 1
+    fi
+}
+
 _artifactory_ensure_cli() {
     : "${_JFROG_INSTALL_URL:=https://getcli.jfrog.io}"
     if ! type -p jfrog ; then
@@ -252,6 +259,7 @@ dockerhub_push_image() {
 ##
 ## @ingroup DockerHub
 dockerhub_set_description() {
+    _ensure_jq
     _dockerhub_ensure_environment || exit 1
     : "${_DOCKERHUB_URL:=https://hub.docker.com/v2}"
     echo "Setting Docker Hub description..."
@@ -355,6 +363,7 @@ github_doc_commit() {
 ##
 ## @ingroup GitHub
 github_releases_get_latest() {
+    _ensure_jq
     JSON=$(curl -fs "https://${GH_TOKEN:+$GH_TOKEN@}api.github.com/repos/$1/tags") || exit 1
     LATEST_TAG="$(jq -r '.[0].name' <<<"${JSON}")" || exit 1
     # shellcheck disable=SC2001
