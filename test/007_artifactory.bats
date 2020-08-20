@@ -5,18 +5,19 @@ load ../src/cd-ci-glue
 
 DOCKER_ARTIFACTORY="docker.bintray.io/jfrog/artifactory-oss:latest"
 ARTIFACTORY_PORT=8081
+ARTIFACTORY_ADMIN_PORT=8082
 
 if ! docker inspect artifactory > /dev/null 2>&1 ; then
     echo -n "Starting local version of Artifactory..." 1>&2
     docker kill artifactory > /dev/null 2>&1 || true
-    docker run --rm --name artifactory -d -p ${ARTIFACTORY_PORT}:${ARTIFACTORY_PORT} \
+    docker run --rm --name artifactory -d -p ${ARTIFACTORY_PORT}-${ARTIFACTORY_ADMIN_PORT}:${ARTIFACTORY_PORT}-${ARTIFACTORY_ADMIN_PORT} \
         "${DOCKER_ARTIFACTORY}" > /dev/null 2>&1
     echo -n "Waiting until Artifactory has fully started..." 1>&2
-    (while ! curl -sfL http://localhost:${ARTIFACTORY_PORT}/artifactory > /dev/null ; do
+    (while ! curl -sfL http://localhost:${ARTIFACTORY_ADMIN_PORT}/artifactory > /dev/null ; do
         echo -n "."
         sleep 1
     done ; true)
-    echo ""
+    echo "done."
 fi
 
 @test "Prerequisite: We should not have the jfrog CLI installed" {
